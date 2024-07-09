@@ -10,14 +10,8 @@ struct CurrentWeatherView: View {
     ]
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            Text("Current Weather")
-                .font(.largeTitle)
-                .fontWeight(.bold)
-                .padding(.leading)
-            
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 20) {
+        VStack(alignment: .leading, spacing: 10) {
+                VStack(spacing: 20) {
                     ForEach(weatherData, id: \.self) { data in
                         TabViewForCurrentWeather(
                             FirstTitle: Binding.constant(data[0]),
@@ -26,14 +20,8 @@ struct CurrentWeatherView: View {
                         )
                     }
                 }
-                .padding()
-            }
-            .background(Color(.systemGray5))
-            .cornerRadius(15)
-            .padding([.leading, .trailing])
+                
         }
-        .padding(.top)
-        .background(Color(.systemBackground).edgesIgnoringSafeArea(.all))
     }
 }
 

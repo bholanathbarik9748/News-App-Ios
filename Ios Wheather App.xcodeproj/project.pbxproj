@@ -17,6 +17,7 @@
 		E574D9472C3AC0A00017136D /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574D9462C3AC0A00017136D /* SearchViewModel.swift */; };
 		E574D94C2C3ACD1E0017136D /* CurrentWeatherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574D94B2C3ACD1E0017136D /* CurrentWeatherView.swift */; };
 		E574D94F2C3ACFA90017136D /* TabViewForCurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574D94E2C3ACFA90017136D /* TabViewForCurrentWeather.swift */; };
+		E574D9532C3C64720017136D /* wheatherServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574D9522C3C64720017136D /* wheatherServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,8 +49,9 @@
 		E574D93C2C3AA79A0017136D /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E574D9422C3AB97C0017136D /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		E574D9462C3AC0A00017136D /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
-		E574D94B2C3ACD1E0017136D /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; };
+		E574D94B2C3ACD1E0017136D /* CurrentWeatherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherView.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		E574D94E2C3ACFA90017136D /* TabViewForCurrentWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewForCurrentWeather.swift; sourceTree = "<group>"; };
+		E574D9522C3C64720017136D /* wheatherServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wheatherServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 		E574D9332C3998D90017136D /* services */ = {
 			isa = PBXGroup;
 			children = (
+				E574D9522C3C64720017136D /* wheatherServices.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				E574D9472C3AC0A00017136D /* SearchViewModel.swift in Sources */,
 				E574D90A2C39989D0017136D /* splashScreen.swift in Sources */,
 				E574D9082C39989D0017136D /* Ios_Wheather_AppApp.swift in Sources */,
+				E574D9532C3C64720017136D /* wheatherServices.swift in Sources */,
 				E574D9432C3AB97C0017136D /* SearchBar.swift in Sources */,
 				E574D94C2C3ACD1E0017136D /* CurrentWeatherView.swift in Sources */,
 				E574D94F2C3ACFA90017136D /* TabViewForCurrentWeather.swift in Sources */,
@@ -642,7 +646,7 @@
 				E574D9272C39989F0017136D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E574D9282C39989F0017136D /* Build configuration list for PBXNativeTarget "Ios Wheather App" */ = {
 			isa = XCConfigurationList;
@@ -651,7 +655,7 @@
 				E574D92A2C39989F0017136D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E574D92B2C39989F0017136D /* Build configuration list for PBXNativeTarget "Ios Wheather AppTests" */ = {
 			isa = XCConfigurationList;
@@ -660,7 +664,7 @@
 				E574D92D2C39989F0017136D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		E574D92E2C39989F0017136D /* Build configuration list for PBXNativeTarget "Ios Wheather AppUITests" */ = {
 			isa = XCConfigurationList;
@@ -669,7 +673,7 @@
 				E574D9302C39989F0017136D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

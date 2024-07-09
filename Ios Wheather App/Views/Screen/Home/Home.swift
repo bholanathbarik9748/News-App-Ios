@@ -2,10 +2,11 @@ import SwiftUI
 
 struct Home: View {
     @ObservedObject var searchViewModel: SearchViewModel
+    @StateObject private var weatherServicesViewModel = WeatherServices();
     
     var body: some View {
         ZStack {
-            // Background color
+            // Background colordd
             Color.primary3
                 .edgesIgnoringSafeArea(.all)
               
@@ -14,6 +15,14 @@ struct Home: View {
         }
         .onReceive(searchViewModel.objectWillChange) { _ in
             print("Search text changed to: \(searchViewModel.searchText)")
+            
+            Task {
+                            do {
+                                try await weatherServicesViewModel.getWeather(location: searchViewModel.searchText)
+                            } catch {
+                                print("Failed to fetch weather: \(error)")
+                            }
+                        }
         }
     }
 }
