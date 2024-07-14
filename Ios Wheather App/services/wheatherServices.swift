@@ -6,7 +6,7 @@ class WeatherServices: ObservableObject {
     
     @Published var weatherData: WeatherModel? // Update to use WeatherModel
     
-    func getWeather(location: String) async throws {
+    func getWeather(location: String) async throws -> WeatherModel {
         guard let apiKey = apiKey else {
             throw WeatherServiceError.missingAPIKey
         }
@@ -20,9 +20,7 @@ class WeatherServices: ObservableObject {
         
         do {
             let decodedData = try JSONDecoder().decode(WeatherModel.self, from: data)
-            DispatchQueue.main.async {
-                self.weatherData = decodedData
-            }
+            return decodedData;
         } catch {
             throw WeatherServiceError.decodingError(error)
         }

@@ -13,4 +13,26 @@ class SearchViewModel : ObservableObject {
     func clearSearchBarText() {
         self.searchText = "";
     }
+    
+    func extractDate(from dateString: String) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        if let date = formatter.date(from: dateString) {
+            formatter.dateFormat = "yyyy-MM-dd"
+            return formatter.string(from: date)
+        } else {
+            return nil
+        }
+    }
+    
+    func extractTimeAmPm(from dateString: String) -> String? {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm"
+        if let date = formatter.date(from: dateString) {
+            formatter.dateFormat = "h:mm a"
+            return formatter.string(from: date)
+        } else {
+            return nil
+        }
+    }
 }
